@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>AG Hostel Valencia | Signup</title>
+      
+    <!-- Bootstrap -->
+    <link href="/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/vendors/bootstrap/css/bootstrap.min.css"          
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="/vendors/bootstrap/css/bootstrap-theme.min.css" 
+    integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="/vendors/bootstrap/js/bootstrap.min.js" 
+        integrity="sha384 0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">         </script>  
+      
+    <!-- Custom CSS Styles Link-->  
+    <link rel="stylesheet" href="/css/signup.css">
+ </head>    
+    
+<body>        
+    <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+          
+              
+          <h1>NOTCH</h1>
+                
+          <h1>wait for 5 minutes for your code</h1>
+          <h1>after register click, pop up details for last checking</h1>
+          <h1>register and use Chikka API</h1>
+          <h1>store in database and wait for admin </h1>
+              <p>FNAME MAX = 15</p>
+                <p>MID NAME = 10</p>
+                    <p>LNAME = 15</p>
+              <p>Number = 11</p>
+          
+          <p>Street Number / Barangay</p>
+          <p>City</p>      
+          <p>Province</p>
+              
+          </div>
+    <form method="post">     
+        <div class="col-md-6"> <!--START OF PANEL-->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3>System User Registration </h3>
+            </div>
+              
+            <div class="panel-body">
+                    <h6>Personal Information</h6>     
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="First Name" maxlength="15"> <br>
+                        <input class="form-control" type="text" placeholder="Middle Name" maxlength="10"><br>
+                        <input class="form-control" type="text" placeholder="Last Name" maxlength="15"> <br>  
+                          
+                        
+                          <div class="container-fluid" style="padding:0px">
+                            <div class="row">
+                                 <div class="col-sm-3 col-md-6">
+                                       <div class="form-group"> <!-- Start of DatePicker-->
+                                                <div class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                </div>
+                                                <input src="/datepicker.js" type="text" id="datepicker" placeholder="Date of Birth" class="form-control"> 
+                                        </div> <!-- End of DatePicker-->  
+                                 </div>
+                                
+                                 <div class="col-sm-3 col-md-6">
+                                                <div class="form-group"> <!-- Start of Cellphone Number-->
+                                                        <div class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-phone"></span>
+                                                        </div>
+                                                        <input type="text" placeholder="Cellphone" class="form-control" maxlength="11"> 
+                                                </div> <!-- End of Cellphone Number--> 
+                                 </div>
+                            </div>
+                        </div>
+                          
+                        <br><br>  
+                          
+                          
+                        <div class="container-fluid">
+                            <div class="row">
+                                 <div class="col-sm-3 col-md-6">
+                                     <div class="form-group">                
+                                        <h6>Sex</h6>  
+                                        <input type="radio" id="male" name="Sex" style="cursor:pointer">
+                                            <label for="male" style="cursor:pointer"><h5>&nbsp;Male </h5> </label> <br>
+                                        <input type="radio" id="female" name="Sex" style="cursor:pointer">
+                                         <label for="female" style="cursor:pointer"><h5>&nbsp;Female</h5> </label>
+                                        </div>
+                                 </div>
+                              
+                                
+                                 <div class="col-sm-3 col-md-6">
+                                        <h6>Status</h6>  
+                     
+                                      <select class="form-control" style="cursor:pointer">
+                                        <option>Single</option>
+                                        <option>Married</option>
+                                        <option>Divorced</option>
+                                        <option>Annulled</option>
+                                      </select>
+                                 </div>
+                            </div>
+                        </div>    
+         
+                 <br><br>
+                          
+                        <h6>Address Information</h6>
+                          
+                        <input class="form-control" type="text" placeholder="Street Number">  <br>
+                        <input class="form-control" type="text" placeholder="Barangay">  <br>  
+                        <input class="form-control" type="text" placeholder="City">  <br>
+                        <input class="form-control" type="text" placeholder="Provice">  <br>
+                          
+                          
+                          <hr>
+                          <center><h3>System Account Information</h3><br></center>
+                        
+                        <h6>Username must be at least 5 characters long</h6>  
+                        <div class="input-group date">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </div>
+                            <input class="form-control" type="text" placeholder="Username" maxlength="15"> <br> 
+                        </div>
+                        
+                        
+                        <h6>Password must be at least 7 characters long</h6>  
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-lock"></span>
+                            </div>
+                            <input class="form-control" type="password" placeholder="Passcode"> <br> 
+                        </div>
+                
+                        <br>
+                
+                         <div class="input-group">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-lock"></span>
+                            </div>
+                            <input class="form-control" type="password" placeholder="Confirm Passcode" > <br> 
+                        </div>
+                        
+                    <br>
+                    <center>
+                        <div class="btn-group">
+                            <a href="/production/login/login.html">
+                                <button type="button" class="btn btn-success" onclick="alert('Registration Success!')"                                         >Register</button> 
+                            </a>    
+                        </div>  
+
+                        <div class="btn-group">
+                             <a href="/production/login/login.html">
+                                <button type="button" class="btn btn-success">Cancel</button>  
+                             </a>     
+                        </div>
+                        
+                        <br><br>
+                        
+                        <h6>Confirmation will be sent to your phone</h6>
+                    </center>
+            </div>  
+          </div> <!--END OF PANEL-->
+        </div> 
+     </form> 
+      </div>
+    </div>        
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="/js/jquery-3.0.0.min.js"></script>
+        
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/vendors/bootstrap/js/bootstrap.min.js"></script>
+        
+    <!-- Datepicker JS and other plugins-->
+        <script src="/vendors/jquery-ui-1.11.4-2/jquery-ui.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/vendors/jquery-ui-1.11.4-2/jquery-ui.css">
+        <script src="/js/datepicker-custom.js"></script>
+  </body>
+</html>

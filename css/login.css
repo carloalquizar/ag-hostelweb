@@ -1,0 +1,76 @@
+           body { 
+                    background-image: url(/img/web-backgrounds/gradienLogin.jpg);
+                    background-repeat:no-repeat;   
+                    padding-top: 55px;
+                    
+                }
+            
+            .panel-default 
+            {
+                background-color: transparent !important;
+                border-radius: 0px;
+                padding:  105;
+                /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+                border-color: transparent !important;
+                height: 150px;
+            }
+        
+            .input-group
+            {
+                border-radius: 0px !important;   
+            }
+    
+           .panel-default > .panel-heading-loginHeading
+            {
+                background-image: none;
+                background-color: transparent;
+                
+            }
+
+            #hostel
+            {
+                color: white;
+            }
+
+            #lbl_SignIn
+            {
+                text-align: center;
+                color: white;
+            }
+            
+            
+            #lbl_noAccount
+            {
+                padding-top: 50px;
+                color: white;
+                padding-left: 12px;
+            }   
+
+            #signUp
+            {
+                color:aqua;
+            }
+            
+            #img
+            {
+                padding-top: 20px;
+                height: 150px;
+                width: 150px;
+                
+            }
+
+            #cb_RM
+            {
+                color: white;    
+            }
+
+            .Glyphs
+            {
+                background-color: white !important;
+                border-color: red !important;
+            }
+
+            #btnLogin
+            {
+                margin-top: 30px;    
+            }
