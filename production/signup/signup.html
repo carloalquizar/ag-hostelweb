@@ -20,36 +20,18 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="/vendors/bootstrap/js/bootstrap.min.js" 
-        integrity="sha384 0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">         </script>  
+        integrity="sha384 0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  
       
     <!-- Custom CSS Styles Link-->  
     <link rel="stylesheet" href="/css/signup.css">
  </head>    
     
-<body>        
-    <div class="container">
-      <div class="row">
-          <div class="col-md-6">
-          
-              
-          <h1>NOTCH</h1>
-                
-          <h1>wait for 5 minutes for your code</h1>
-          <h1>after register click, pop up details for last checking</h1>
-          <h1>register and use Chikka API</h1>
-          <h1>store in database and wait for admin </h1>
-              <p>FNAME MAX = 15</p>
-                <p>MID NAME = 10</p>
-                    <p>LNAME = 15</p>
-              <p>Number = 11</p>
-          
-          <p>Street Number / Barangay</p>
-          <p>City</p>      
-          <p>Province</p>
-              
-          </div>
-    <form method="post">     
-        <div class="col-md-6"> <!--START OF PANEL-->
+<body>      
+    <div class="container">    
+        <div class="row">
+            <div class="col-md-4"></div>
+                <div class="col-md-7">
+         <form method="post" data-toggle="validator" role="form">     <!--START OF PANEL-->
           <div class="panel panel-default">
             <div class="panel-heading">
               <h3>System User Registration </h3>
@@ -57,31 +39,41 @@
               
             <div class="panel-body">
                     <h6>Personal Information</h6>     
-                      <div class="form-group">
-                        <input class="form-control" type="text" placeholder="First Name" maxlength="15"> <br>
-                        <input class="form-control" type="text" placeholder="Middle Name" maxlength="10"><br>
-                        <input class="form-control" type="text" placeholder="Last Name" maxlength="15"> <br>  
+                          <div class="form-group has-feedback">  
+                            <input class="form-control" type="text" placeholder="First Name" pattern="^[A-Z a-z]{1,}$" maxlength="15" required> 
+                          </div>  
+                        <div class="form-group has-feedback">  
+                            <input class="form-control" type="text" placeholder="Middle Name" pattern="^[A-Z a-z]{1,}$" maxlength="10" required>
+                        </div>      
+                        <div class="form-group has-feedback">  
+                            <input class="form-control" type="text" placeholder="Last Name"  pattern="^[A-Z a-z]{1,}$" maxlength="15" required> 
+                        </div>    
                           
                         
-                          <div class="container-fluid" style="padding:0px">
+                          <div class="container-fixed" >
                             <div class="row">
                                  <div class="col-sm-3 col-md-6">
-                                       <div class="input-group"> <!-- Start of DatePicker-->
+                                     <div class="form-group">
+                                       <div class="input-group form-group has-feedback"> <!-- Start of DatePicker-->
                                                 <div class="input-group-addon">
                                                         <span class="glyphicon glyphicon-calendar"></span>
                                                 </div>
-                                                <input src="/datepicker.js" type="text" id="datepicker" placeholder="Date of Birth" class="form-control"> 
+                                                <input src="/datepicker.js" type="text" id="datepicker"                                                                                           placeholder="Date of Birth" class="form-control"  required> 
                                         </div> <!-- End of DatePicker-->  
-                                 </div>
-                                
+                                    </div>
+                                </div>
+                                        
+                                    
                                  <div class="col-sm-3 col-md-6">
-                                                <div class="input-group"> <!-- Start of Cellphone Number-->
+                                      <div class="form-group">
+                                                <div class="input-group form-group has-feedback"> <!-- Start of Cellphone Number-->
                                                         <div class="input-group-addon">
                                                                 <span class="glyphicon glyphicon-phone"></span>
                                                         </div>
-                                                        <input type="text" placeholder="Cellphone" class="form-control" maxlength="11"> 
+                                                        <input type="text" data-minlength="11" pattern="^[0-9]{1,}$" placeholder="Cellphone                                                             Number" class="form-control" maxlength="11"  required>  
                                                 </div> <!-- End of Cellphone Number--> 
-                                 </div>
+                                     </div>
+                                </div>
                             </div>
                         </div>
                           
@@ -91,25 +83,37 @@
                         <div class="container-fluid">
                             <div class="row">
                                  <div class="col-sm-3 col-md-6">
-                                     <div class="form-group">                
-                                        <h6>Sex</h6>  
-                                        <input type="radio" id="male" name="Sex" style="cursor:pointer">
-                                            <label for="male" style="cursor:pointer"><h5>&nbsp;Male </h5> </label> <br>
-                                        <input type="radio" id="female" name="Sex" style="cursor:pointer">
-                                         <label for="female" style="cursor:pointer"><h5>&nbsp;Female</h5> </label>
+                                     <div class="form-group">     
+                                         <div class="radio">
+                                            <h6>Sex</h6>  
+                                            <label>
+                                                <input type="radio" name="sex" required>
+                                                Male
+                                            </label>
                                         </div>
+                                         
+                                         <div class="radio"> 
+                                            <label>
+                                                <input type="radio" name="sex" required>
+                                                Female
+                                            </label>
+                                        </div>
+                                     </div>
                                  </div>
                               
                                 
                                  <div class="col-sm-3 col-md-6">
+                                    <div class="form-group"> 
                                         <h6>Status</h6>  
                      
-                                      <select class="form-control" style="cursor:pointer">
+                                      <select class="form-control" style="cursor:pointer" required>
                                         <option>Single</option>
+                                        <option>Taken</option>  
                                         <option>Married</option>
                                         <option>Divorced</option>
                                         <option>Annulled</option>
                                       </select>
+                                </div>
                                  </div>
                             </div>
                         </div>    
@@ -117,49 +121,65 @@
                  <br><br>
                           
                         <h6>Address Information</h6>
-                          
-                        <input class="form-control" type="text" placeholder="Street Number">  <br>
-                        <input class="form-control" type="text" placeholder="Barangay">  <br>  
-                        <input class="form-control" type="text" placeholder="City">  <br>
-                        <input class="form-control" type="text" placeholder="Provice">  <br>
-                          
+                    <div class="input-group form-group has-feedback">       
+                        <div class="input-group-addon input-group">
+                                <span class="glyphicon glyphicon-tent"></span>
+                        </div>
+                        <input class="form-control" type="text" placeholder="Province" pattern="^[A-Z a-z]{1,}$" required>  
+                    </div>
+                
+                     <div class="input-group form-group has-feedback">    
+                         <div class="input-group-addon input-group">
+                                <span class="glyphicon glyphicon-tower"></span>
+                        </div>
+                        <input class="form-control" type="text" placeholder="City" pattern="^[A-Z a-z]{1,}$" required>    
+                    </div>    
+                
+                     <div class="input-group form-group has-feedback">   
+                         <div class="input-group-addon input-group">
+                                <span class="glyphicon glyphicon-home"></span>
+                        </div>
+                        <input class="form-control" type="text" placeholder="Barangay / Sitio" pattern="^[A-Z a-z]{1,}$" required>  
+                    </div>    
+                
+                     <div class="input-group form-group has-feedback">          
+                         <div class="input-group-addon input-group">
+                                <span class="glyphicon glyphicon-road"></span>
+                        </div>
+                        <input class="form-control" type="text" placeholder="Street Number" pattern="^[A-Z a-z]{1,}$"  required>  
+                    </div>      
                           
                           <hr>
                           <center><h3>System Account Information</h3><br></center>
                         
-                        <h6>Username must be at least 5 characters long</h6>  
-                        <div class="input-group date">
+                        <h6>Username must be at least 5 characters long (letters and numbers only)</h6>  
+                        <div class="input-group form-group has-feedback"> 
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-user"></span>
                             </div>
-                            <input class="form-control" type="text" placeholder="Username" maxlength="15"> 
-                        </div>
-                        
-                        
-                        <h6>Password must be at least 7 characters long</h6>  
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <span class="glyphicon glyphicon-lock"></span>
-                            </div>
-                            <input class="form-control" type="password" placeholder="Passcode"> 
-                        </div>
+                            <input class="form-control" type="text" placeholder="Username" maxlength="15"  pattern="[A-z0-9]{1,}$"                                             data-minlength="5" required> 
+                        </div> 
+                      
+                       <div class="form-group has-feedback">
+                          <input type="password" data-minlength="7" class="form-control" id="inputPassword" placeholder="Password" required>
+                          <h6><div class="help-block">Minimum of 7 characters</div></h6>
+                      </div>
                 
-                        <br>
-                
-                         <div class="input-group">
-                            <div class="input-group-addon">
-                                <span class="glyphicon glyphicon-lock"></span>
-                            </div>
-                            <input class="form-control" type="password" placeholder="Confirm Passcode" >  
+                     <div class="form-group has-feedback">
+                          <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword"                                                 data-match-error="Passwords don't match" placeholder="Confirm Password" required>
+                          <div class="help-block with-errors"></div> 
+                    </div>
+
                         </div>
                         
                     <br>
                     <center>
-                        <div class="btn-group">
+                          <div class="btn-group button">
                             <a href="/production/login/login.html">
-                                <button type="button" class="btn btn-success" onclick="alert('Registration Success!')"                                         >Register</button> 
+                                <button type="submit" class="btn btn-success">Register</button> 
                             </a>    
                         </div>  
+
 
                         <div class="btn-group">
                              <a href="/production/login/login.html">
@@ -175,8 +195,12 @@
           </div> <!--END OF PANEL-->
         </div> 
      </form> 
-      </div>
-    </div>        
+                </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="/js/jquery-3.0.0.min.js"></script>
         
@@ -189,6 +213,8 @@
         <script src="/js/datepicker-custom.js"></script>
         
     <!-- Textfield Validators -->
-        
+    <script src="/vendors/bootstrap-validator-master/dist/validator.js"></script>
+    <script src="/vendors/bootstrap-validator-master/dist/validator.min.js"></script>
+
   </body>
 </html>

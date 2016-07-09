@@ -55,7 +55,7 @@
   Validator.FOCUS_OFFSET = 20
 
   Validator.DEFAULTS = {
-    delay: 500,
+    delay: 100,
     html: false,
     disable: true,
     focus: true,
@@ -63,6 +63,7 @@
     errors: {
       match: 'Does not match',
       minlength: 'Not long enough'
+          
     },
     feedback: {
       success: 'glyphicon-ok',
